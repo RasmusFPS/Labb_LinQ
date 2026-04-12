@@ -12,11 +12,9 @@ namespace Labb_LinQ
         {
             Info info = new Info();
             bool running = true;
-
-            while(running)
+            Console.WriteLine("-- Welcome --");
+            while (running)
             {
-                Console.WriteLine("-- Welcome --");
-                Thread.Sleep(1000);
                 Console.WriteLine("1. Get all Electronics and sort after price");
                 Console.WriteLine("2. Show all Suppliers with less than 10 units");
                 Console.WriteLine("3. Total monthly revenue from orders");
@@ -26,21 +24,33 @@ namespace Labb_LinQ
                 Console.WriteLine("7. EXIT");
 
                 string answer = Console.ReadLine();
+                Console.Clear();
 
                 switch(answer)
                 {
                     case "1":
                         info.GetElectronics();
+                        waitAndClear();
                         break;
                     case "2":
+                        info.GetSuppliers();
+                        waitAndClear();
                         break;
                     case "3":
+                        info.MonthlyRev();
+                        waitAndClear();
                         break;
                     case "4":
+                        info.MostSoldProd();
+                        waitAndClear();
                         break;
                     case "5":
+                        info.ShowCatagories();
+                        waitAndClear();
                         break;
                     case "6":
+                        info.ExpensiveOrders();
+                        waitAndClear();
                         break;
                     case "7":
                         return;
@@ -49,6 +59,13 @@ namespace Labb_LinQ
                         break;
                 }
             }
+        }
+
+        private void waitAndClear()
+        {
+            Console.WriteLine("\nPress AnyKey to continue...");
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }

@@ -15,5 +15,9 @@ namespace Labb_LinQ.models
         public int TotalAmount { get; set; }
         [Required]
         public string Status { get; set; } = string.Empty;
+
+        public Customer customer { get; set; } = null!;
+       public ICollection<OrderDetails> OrderDetails { get; set; } = new List<OrderDetails>();
+
     }
 }
