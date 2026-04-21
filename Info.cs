@@ -137,7 +137,7 @@ namespace Labb_LinQ
                     Console.WriteLine($"Address: {o.Adress}");
                     Console.WriteLine($"Email and PhoneNumber: {o.Email} | {o.Phone}");
                     Console.WriteLine($"Total sum: {o.TotalAmount}KR");
-                    Console.WriteLine($"orderStatus: {o.Status} | Order Date {o.Date:yyyy:mm:dd}");
+                    Console.WriteLine($"orderStatus: {o.Status} | Order Date {o.Date:yyyy:MM:dd}");
                     Console.WriteLine($"Products:");
                     foreach(var prods in o.prods)
                     {
